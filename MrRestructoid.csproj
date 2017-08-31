@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	
+	<RuntimeIdentifiers>win7-x64;win10-x64;linux-arm</RuntimeIdentifiers>
+	
+	<ApplicationIcon />
+	
+	<OutputTypeEx>library</OutputTypeEx>
+	
+	<StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Osrs\**" />
+    <EmbeddedResource Remove="Osrs\**" />
+    <None Remove="Osrs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Discord.Net" Version="1.0.1" />
+  </ItemGroup>
+
+</Project>
